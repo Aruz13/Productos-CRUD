@@ -14,6 +14,8 @@ El proyecto está dividido en dos carpetas:
 - **problema1**: Contiene el código del **frontend** desarrollado con Angular.
 - **problema2**: Contiene el código del **backend** desarrollado con Node.js y Express.
 
+Para ejecutar simplemente dentro de su respectiva carpeta se ejecuta el **node server.js** y **ng serve**.
+
 
 ## Dependencias
 
