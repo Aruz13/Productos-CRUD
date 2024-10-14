@@ -34,7 +34,7 @@ export class CartService {
       }
       i=i+1
     }
-    /*
+    /*no jala xd
     if (index !== -1) {
       currentCart.splice(index, 1); // Eliminamos solo la primera coincidencia
     }*/

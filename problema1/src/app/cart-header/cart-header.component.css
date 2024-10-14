@@ -13,7 +13,7 @@
     color: white;
   }
   
-  /* Estilos para la ventana flotante del carrito */
+  
   .cart-overlay {
     position: fixed;
     top: 0;
@@ -31,12 +31,12 @@
     padding: 20px;
     width: 300px;
     border-radius: 10px;
-    max-height: 400px; /* Establece la altura máxima de la ventana del carrito */
-    overflow-y: auto; /* Permite el desplazamiento vertical si el contenido excede la altura máxima */
-    border: 1px solid #ccc; /* Puedes agregar un borde para distinguir la ventana */
-    padding: 16px; /* Espaciado interno */
-    background-color: white; /* Fondo blanco para la ventana */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para un efecto elevado */
+    max-height: 400px; 
+    overflow-y: auto; 
+    border: 1px solid #ccc; 
+    padding: 16px; 
+    background-color: white; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   }
 
   .manage-overlay{
@@ -49,7 +49,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-y: auto; /* Permite el desplazamiento vertical si el contenido excede la altura máxima */
+    overflow-y: auto;
   }
 
   .modal-overlay{
@@ -62,7 +62,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-y: auto; /* Permite el desplazamiento vertical si el contenido excede la altura máxima */
+    overflow-y: auto; 
   }
 
   .manage-window {
@@ -73,11 +73,11 @@
     width: 90%;
     height: 80%;
     border-radius: 10px;
-    overflow-y: auto; /* Permite el desplazamiento vertical si el contenido excede la altura máxima */
-    border: 1px solid #ccc; /* Puedes agregar un borde para distinguir la ventana */
-    padding: 16px; /* Espaciado interno */
-    background-color: white; /* Fondo blanco para la ventana */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para un efecto elevado */
+    overflow-y: auto; 
+    border: 1px solid #ccc; 
+    padding: 16px; 
+    background-color: white; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   }
 
   .modal-window{
@@ -88,11 +88,11 @@
     width: 90%;
     height: 80%;
     border-radius: 10px;
-    overflow-y: auto; /* Permite el desplazamiento vertical si el contenido excede la altura máxima */
-    border: 1px solid #ccc; /* Puedes agregar un borde para distinguir la ventana */
-    padding: 16px; /* Espaciado interno */
-    background-color: white; /* Fondo blanco para la ventana */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para un efecto elevado */
+    overflow-y: auto; 
+    border: 1px solid #ccc; 
+    padding: 16px;
+    background-color: white; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   .cart-window h4 {

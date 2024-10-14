@@ -23,7 +23,6 @@ export class CartHeaderComponent implements OnInit {
   constructor(private cartService: CartService, private productsService: ProductService) {}
 
   ngOnInit(): void {
-    // Nos suscribimos a los cambios del carrito para actualizaciones en tiempo real
     this.cartService.cart$.subscribe((cart) => {
       this.cart = cart;
     });
@@ -56,7 +55,6 @@ export class CartHeaderComponent implements OnInit {
     if (this.newProduct.title && this.newProduct.description && this.newProduct.price) {
       this.productsService.postProducts(this.newProduct).subscribe(() => {
         console.log(this.newProduct)
-        // Aquí puedes manejar lo que ocurre después de añadir el producto
         this.resetForm();
         window.location.reload();
       }, error => {
@@ -72,7 +70,7 @@ export class CartHeaderComponent implements OnInit {
       description: '',
       price: null
     };
-    this.toggleAddProductModal(); // Cierra el modal
+    this.toggleAddProductModal(); 
   }
 
   toggleAddProductModal() {
