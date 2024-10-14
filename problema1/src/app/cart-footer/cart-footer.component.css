@@ -1,0 +1,37 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40;
+    color: rgb(117, 165, 50);
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .footer button {
+    color: white;
+  }
+  
+  /* Estilos para la ventana flotante del carrito */
+  .cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cart-window {
+    background-color: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+  }
+  
+  .cart-window h4 {
+    margin-bottom: 15px;
+  }

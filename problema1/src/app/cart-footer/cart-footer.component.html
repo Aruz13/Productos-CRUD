@@ -1,0 +1,20 @@
+<div class="footer">
+    <button class="btn btn-primary" (click)="toggleCart()">
+      🛒 Carrito ({{ getCartCount() }})
+    </button>
+  
+    <!-- Ventana flotante del carrito -->
+    <div class="cart-overlay" *ngIf="showCart">
+      <div class="cart-window">
+        <h4>Carrito de Compras</h4>
+        <div *ngIf="cart.length === 0">El carrito está vacío</div>
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let product of cart">
+            <strong>{{ product.title }}</strong> - {{ product.price | currency }}
+            <button class="btn btn-danger btn-sm float-right" (click)="removeFromCart(product)">Eliminar</button>
+          </li>
+        </ul>
+        <button class="btn btn-secondary mt-3" (click)="toggleCart()">Cerrar</button>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,16 @@
+.container {
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+  
+  .card {
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .product-list-container {
+    margin: 200px; 
+  }

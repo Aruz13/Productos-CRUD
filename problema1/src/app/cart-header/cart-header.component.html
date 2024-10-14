@@ -1,0 +1,69 @@
+<div class="header">
+    <button class="btn btn-primary" (click)="toggleCart()">
+      🛒 Carrito ({{ getCartCount() }})
+    </button>
+
+
+    <button class="btn btn-secondary" (click)="toggleManageProducts()">
+      🛠️ Gestionar productos
+    </button>
+  
+    <!-- Ventana flotante del carrito -->
+    <div class="cart-overlay" *ngIf="showCart">
+      <div class="cart-window">
+        <h4>Carrito de Compras</h4>
+        <div *ngIf="cart.length === 0">El carrito está vacío</div>
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let product of cart">
+            <strong>{{ product.title }}</strong> - {{ product.price | currency }}
+            <button class="btn btn-danger btn-sm float-right" (click)="removeFromCart(product)">Eliminar</button>
+          </li>
+        </ul>
+        <button class="btn btn-secondary mt-3" (click)="toggleCart()">Cerrar</button>
+      </div>
+    </div>
+
+    <div class="manage-overlay" *ngIf="showManageProducts">
+      <div class="manage-window">
+        <h4>Gestionar Productos</h4>
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let product of products">
+            <strong>{{ product.title }}</strong> - {{ product.price | currency }}
+            <button class="btn btn-warning btn-sm float-right" (click)="editProduct(product)">Editar</button>
+            <button class="btn btn-danger btn-sm float-right mr-2" (click)="deleteProduct(product.id)">Eliminar</button>
+          </li>
+        </ul>
+        <button class="btn btn-secondary mt-3" (click)="toggleManageProducts()">Cerrar</button>
+      </div>
+    </div>
+
+
+ <!-- Botón para abrir el modal de añadir producto -->
+ <button class="btn btn-success" (click)="toggleAddProductModal()">
+  Añadir Producto
+</button>
+
+<!-- Modal para añadir producto -->
+<div class="modal-overlay" *ngIf="showAddProductModal">
+  <div class="modal-window">
+    <h4>Añadir Producto</h4>
+    <form (ngSubmit)="addNewProduct()">
+      <div class="form-group">
+        <label for="productTitle">Título del Producto</label>
+        <input type="text" class="form-control" id="productTitle" [(ngModel)]="newProduct.title" name="title" required>
+      </div>
+      <div class="form-group">
+        <label for="productDescription">Descripción</label>
+        <textarea class="form-control" id="productDescription" [(ngModel)]="newProduct.description" name="description" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="productPrice">Precio</label>
+        <input type="number" class="form-control" id="productPrice" [(ngModel)]="newProduct.price" name="price" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Añadir Producto</button>
+      <button type="button" class="btn btn-secondary" (click)="toggleAddProductModal()">Cerrar</button>
+    </form>
+  </div>
+</div>
+
+  </div>
